@@ -37,7 +37,7 @@ defmodule Base58Check.Base58Check do
   def decode(payload) do
     payload
     |> Base58Zero.decode()
-    |> binary_part(1, 20)
+    |> binary_part(0, 21)
   end
 
   @spec add_checksum(binary()) :: binary()
